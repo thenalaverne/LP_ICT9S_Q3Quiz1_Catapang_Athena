@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <style>
+    body {
+      font-family: "Dancing Script";
+      background-color: floralwhite ;
+      color: hotpink;
+      text-align: center;
+    }
+    .converter {
+      background-color: lightpink;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+
+    }
+    .  {
+      background-color: deeppink;
+      color: white;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="converter">
+    <h2>If a=20 and b=5, compute for the following</h2>
+    <h1>Arithmetic Operation</h1>
+        <div class="output" id="arithmeticOutput" class="hidden"></div>
+        <button onclick="showArithmetic()">Show Answer</button>
+    <h1>Comparison Operation</h1>
+            <div class="output" id="comparisonOutput" class="hidden"></div>
+        <button onclick="showComparison()">Show Answer</button>
+    <h1>Logical Operation</h1>
+          <div class="output" id="comparisonLogical" class="hidden"></div>
+        <button onclick="showLogical()">Show Answer</button>
+</div>
+
+ <script>
+        const a = 20;
+        const b = 5;
+
+        function showArithmetic() {
+            const exponent = a ** b;
+            const mod = a % b;
+            document.getElementById('arithmeticOutput').innerHTML = `a. Exponent: ${exponent}<br>b. Mod: ${mod}`;
+            document.getElementById('arithmeticOutput').classList.remove('hidden');
+        }
+
+        function showComparison() {
+            const isGreater = a > b;
+            const isEqual = a === b;
+            document.getElementById('comparisonOutput').innerHTML = `a. is a greater than b?: ${isGreater}<br>b. is a equal to b?: ${isEqual}`;
+            document.getElementById('comparisonOutput').classList.remove('hidden');
+        }
+</script>
+</body>
+</html>
